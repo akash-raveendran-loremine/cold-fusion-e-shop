@@ -52,7 +52,9 @@
                         <a href="#buildURL('main.orders')#" class="nav-link text-light"><i class="bi bi-truck"></i>
                             Orders <span class="badge rounded-pill bg-light text-primary" id="orderCount"
                                 style="transform: translateY(-10px);"> </span></a>
-                        <a href="#buildURL('auth.logout')#" class="nav-link text-danger fw-bold">
+                        <a href="#buildURL('auth.logout')#" class="nav-link text-danger fw-bold"
+                        onclick="return confirm('Logout from Eshop?')"
+                        >
                             Logout <i class="bi bi-power"></i></a>
                     </cfoutput>
                 </div>

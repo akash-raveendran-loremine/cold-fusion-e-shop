@@ -30,17 +30,19 @@
         <div class="container-fluid">
             <div class="row w-100">
                 <div class="col ms-5">
-                   <cfoutput>
-                        <a href="#buildURL('admin')#" class="nav-link text-light fw-bold fs-1"><i class="bi bi-bag-heart-fill"></i> Admin ESHOP</a>
-                   </cfoutput>
+                    <cfoutput>
+                        <a href="#buildURL('admin')#" class="nav-link text-light fw-bold fs-1"><i
+                                class="bi bi-bag-heart-fill"></i> Admin ESHOP</a>
+                    </cfoutput>
                 </div>
                 <div class="col d-flex justify-content-end align-items-center">
                     <cfoutput> <a href=#buildURL('admin')# class="nav-link text-light fw-bold">Products</a>
                         <a href="#buildURL('admin.categoryList')#" class="nav-link text-light fw-bold">Categories </a>
                         <a href="#buildURL('admin.usersList')#" class="nav-link text-light fw-bold">Users</a>
                         <a href="#buildURL('admin.allOrders')#" class="nav-link text-light fw-bold">Orders</a>
-                        <a href="#buildURL('auth.logout')#" class="nav-link text-danger fw-bold ms-3"> <i
-                                class="bi bi-power"></i> Logout</a>
+                        <a href="#buildURL('auth.logout')#" class="nav-link text-danger fw-bold ms-3"
+                            onclick="return confirm('Logout from Eshop-admin?')"> <i class="bi bi-power"></i>
+                            Logout</a>
                     </cfoutput>
                 </div>
             </div>
@@ -114,7 +116,8 @@
                 </div>
                 <!---   end of model form--->
                 <cfoutput>
-                    <a href="#buildURL('admin.addProduct')#" class="btn btn-info mt-3 me-3"><i class="bi bi-plus-lg"></i> Add New Product</a>
+                    <a href="#buildURL('admin.addProduct')#" class="btn btn-info mt-3 me-3"><i
+                            class="bi bi-plus-lg"></i> Add New Product</a>
                 </cfoutput>
             </div>
         </div>
