@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/title-logo.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -13,8 +14,9 @@
     <title>Signup</title>
 </head>
 
-<body style="background: linear-gradient(to right,rgb(205, 255, 205) , rgb(181, 181, 247));">
+<body style="background: linear-gradient(to bottom, rgb(29, 70, 104), rgb(23, 55, 82));">
   <!--- error alert start --->
+  <cfoutput>
     <cfparam name="rc.message" default="#arrayNew(1)#">
         <cfif not arrayIsEmpty(rc.message)>
             <cfloop array="#rc.message#" index="msg">
@@ -27,10 +29,11 @@
                 </div>
             </cfloop>
         </cfif>
+  </cfoutput>
 
         <!--- error alert end --->
     <div class="container">
-        <div class="card shadow p-5 m-5 mt-2">
+        <div class="card shadow p-5 m-4 ">
             <div class="row">
                 <div class="col-12">
                     <h1 class="text-center mb-5">Login</h1>
@@ -54,7 +57,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Submit</button>
                         <cfoutput>
-                        <p class="text-muted mt-2 text-end">Doesn't have an account <a href="#buildURL('auth.signup')#">register here</a></p>
+                        <p class="text-muted mt-3 text-end">Doesn't have an account <a href="#buildURL('auth.signup')#">register here</a></p>
                         </cfoutput>
                     </form>
                 </cfoutput>
