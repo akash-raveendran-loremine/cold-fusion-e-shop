@@ -2,11 +2,11 @@
     <cfif rc.userOrders.recordCount eq 0>
         <div class="text-center">
             <h1 class=" py-5">
-                You Haven't Ordered Anything Yet.
+                You Haven't Ordered Anything Yet.🙁
             </h1>
             <a href="#buildURL('main.default')###products" class="btn btn-outline-success text-decoration-none">Start
-                Buying
-                Now
+                Shopping
+                Now ... <i class="bi bi-cart4"></i>
             </a>
         </div>
         <cfelse>

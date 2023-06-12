@@ -2,11 +2,11 @@
     <cfif rc.netTotal eq 0>
         <div class="text-center">
             <h1 class=" py-5">
-                You Haven't added Anything Yet.
+                You Haven't added Anything Yet.🙁
             </h1>
             <a href="#buildURL('main.default')###products" class="btn btn-outline-success text-decoration-none">Start
-                Buying
-                Now</a>
+                Shopping
+                Now ... <i class="bi bi-cart4"></i></a>
         </div>
         <cfelse>
             <h1 class="text-center">Items In Your cart</h1>

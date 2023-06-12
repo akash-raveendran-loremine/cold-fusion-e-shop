@@ -74,4 +74,11 @@ component accessors =true output=false{
         };
         queryExecute(local.sql,local.params);
     }
+    public function getOrdersCount(string customerEmail){
+        local.sql="SELECT COUNT(*) as cnt FROM  orders WHERE  customerEmail=:customerEmail"
+        local.params={
+            customerEmail={value:arguments.customerEmail,cfsqltype:"CF_SQL_VARCHAR"}
+        }
+        return queryExecute(local.sql, local.params).cnt;
+    }
 }

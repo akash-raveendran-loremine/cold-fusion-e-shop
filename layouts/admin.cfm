@@ -30,7 +30,7 @@
             <div class="row w-100">
                 <div class="col ms-5">
                    <cfoutput>
-                        <a href="#buildURL('admin')#" class="nav-link text-light fw-bold fs-1">Admin ESHOP</a>
+                        <a href="#buildURL('admin')#" class="nav-link text-light fw-bold fs-1"><i class="bi bi-bag-heart-fill"></i> Admin ESHOP</a>
                    </cfoutput>
                 </div>
                 <div class="col d-flex justify-content-end align-items-center">
@@ -83,7 +83,7 @@
             <div>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-info mt-3" data-bs-toggle="modal"
-                    data-bs-target="#addCategoryForm">
+                    data-bs-target="#addCategoryForm"><i class="bi bi-plus-lg"></i>
                     Add New Category
                 </button>
 
@@ -113,7 +113,7 @@
                 </div>
                 <!---   end of model form--->
                 <cfoutput>
-                    <a href="#buildURL('admin.addProduct')#" class="btn btn-info mt-3 me-3">Add New Product</a>
+                    <a href="#buildURL('admin.addProduct')#" class="btn btn-info mt-3 me-3"><i class="bi bi-plus-lg"></i> Add New Product</a>
                 </cfoutput>
             </div>
         </div>

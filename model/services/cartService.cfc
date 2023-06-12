@@ -33,4 +33,11 @@ component {
         }
         queryExecute(local.sql, local.params);
     }
+    function getCartCount(string customerEmail){
+        local.sql="SELECT COUNT(*) as cnt FROM  cart WHERE  customerEmail=:customerEmail"
+        local.params={
+            customerEmail={value:arguments.customerEmail,cfsqltype:"CF_SQL_VARCHAR"}
+        }
+        return queryExecute(local.sql, local.params).cnt;
+    }
 }

@@ -42,12 +42,12 @@
                         <td class="text-end">
                             <cfif #status# eq 'placed'>
                                 <a href="#buildURL(action='admin.shipOrder',querystring='orderID=#orderID#')#"
-                                    class="btn btn-success" onclick="return confirm('Ship this product ?');">Ship the
+                                    class="btn btn-success tooltip-test" title="ship item?" onclick="return confirm('Ship this product ?');"> <i class="bi bi-truck"></i> Ship
                                     product</a>
                             </cfif>
                             <cfif #status# !='cancelled'>
                                 <a href="#buildURL(action='admin.cancelOrder',querystring='orderID=#orderID#')#"
-                                    class="btn btn-danger">Cancel Order</a>
+                                    class="btn btn-danger tootip-test" title="cancel order?"><i class="bi bi-x-octagon-fill"></i> Cancel</a>
                             </cfif>
                         </td>
                     </tr>

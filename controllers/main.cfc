@@ -76,4 +76,12 @@ component accessors=true {
         rc.increment = variables.cartService.changeCartProductQuantity(rc.cartID,-1);
         variables.fw.redirect(action="main.cart");
     }
+    function getCartCount(rc){
+        rc.ajaxdata = variables.cartService.getCartCount(session.userEmail);
+        variables.fw.renderData("json",rc.ajaxdata)
+    }
+    function getOrdersCount(rc){
+        rc.ajaxdata = variables.orderService.getOrdersCount(session.userEmail);
+        variables.fw.renderData("json",rc.ajaxdata)
+    }
 }
