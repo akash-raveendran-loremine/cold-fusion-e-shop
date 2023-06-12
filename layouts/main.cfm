@@ -27,13 +27,29 @@
             position: fixed;
             top: 0;
             width: 100%;
-            z-index: 1000;
+            z-index: 900;
             background: linear-gradient(to bottom, rgb(29, 70, 104), rgb(23, 55, 82));
         }
     </style>
 </head>
 
 <body>
+ <!--- error alert start --->
+  <cfoutput>
+    <cfparam name="rc.message" default="#arrayNew(1)#">
+        <cfif not arrayIsEmpty(rc.message)>
+            <cfloop array="#rc.message#" index="msg">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert"
+                    style="position: fixed;top:10px;right:10px;z-index:1000">
+                    <cfoutput>
+                        <strong>#msg#</strong>
+                    </cfoutput>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </cfloop>
+        </cfif>
+  </cfoutput>
+<!--- error alert end --->
     <nav class="navbar navbar-dark">
         <div class="container-fluid">
             <div class="row w-100">

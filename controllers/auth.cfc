@@ -31,11 +31,13 @@ component accessors=true {
             if(rc.userDetails.RecordCount() eq 1 && rc.userDetails.role eq 1){
                 session.auth.isLoggedIn = true;
                 session.role = "admin";
-                variables.fw.redirect(action="admin.default");
+                rc.message = ["Login Successfull !!!"];
+                variables.fw.redirect(action="admin.default",preserve="message");
             }else if(rc.userDetails.RecordCount() eq 1){
                 session.auth.isLoggedIn = true;
                 session.role = "user";
                 session.userEmail = rc.userDetails.email;
+                rc.message = ["Login Successfull !!!"];
                 variables.fw.redirect(action="main.home");
             }else{
                 rc.message = ["Login Failed !!! Invalid Credentials"];
