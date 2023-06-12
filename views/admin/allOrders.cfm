@@ -1,5 +1,8 @@
 <div class="container mt-5">
-    <h2 class="text-center">
+    <cfif #rc.allOrders.recordCount# eq 0>
+        <h2 class="text-center mt-5 pt-5">No Orders Found</h2>
+    <cfelse>
+    <h2 class="text-center mb-3">
         Orders List
     </h2>
     <table class="table">
@@ -52,4 +55,5 @@
             </cfoutput>
         </tbody>
     </table>
+    </cfif>
 </div>

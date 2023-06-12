@@ -1,6 +1,8 @@
 <cfoutput>
     <div class="container mt-5">
-        <cfparam name="rc.allProducts" default="#arrayNew(1)#">
+        <cfif #rc.categoryList.recordCount# eq 0>
+                <h2 class="text-center mt-5 pt-5">No Categories Found</h2>
+        <cfelse>
             <div class="card p-5">
                 <h2 class="text-center mb-3">All Categories</h2>
                 <table class="table">
@@ -33,6 +35,7 @@
                     </tbody>
                 </table>
             </div>
+        </cfif>
     </div>
 </cfoutput>
 
