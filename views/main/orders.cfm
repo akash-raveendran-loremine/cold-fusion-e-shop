@@ -1,6 +1,16 @@
-<h1 class="text-center">Your Orders</h1>
-
 <cfoutput>
+    <cfif rc.userOrders.recordCount eq 0>
+        <div class="text-center">
+            <h1 class=" py-5">
+                You Haven't Ordered Anything Yet.
+            </h1>
+            <a href="#buildURL('main.default')###products" class="btn btn-outline-success text-decoration-none">Start
+                Buying
+                Now
+            </a>
+        </div>
+        <cfelse>
+    <h1 class="text-center">Your Orders</h1>
     <div class="container my-5 px-5">
 
         <cfloop query="#rc.userOrders#">
@@ -40,4 +50,5 @@
             </div>
         </cfloop>
     </div>
+    </cfif>
 </cfoutput>
