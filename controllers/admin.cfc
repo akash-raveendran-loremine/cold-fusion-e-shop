@@ -10,6 +10,16 @@ component accessors=true {
         return this;
     }
 
+    public any function before (fw) {
+        if(structKeyExists(session, 'role')){
+            if(session.auth.isLoggedIn != true || session.role != "admin"){
+                variables.fw.redirect(action="auth.login");
+            }
+        }else{
+                variables.fw.redirect(action="auth.login");
+        }
+    }
+
     public void function default(rc){
         if(structKeyExists(session, 'role')){
             if(session.role eq "admin" && session.auth.isLoggedIn eq true){
